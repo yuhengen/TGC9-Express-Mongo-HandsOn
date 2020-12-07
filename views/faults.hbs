@@ -1,0 +1,35 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}
+All Faults
+{{/block}}
+
+{{#block 'content'}}
+<h1>All Faults</h1>
+<a href='/fault/add' class="btn btn-primary mb-3 mt-3">Add New Fault</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Tags</th>
+                <th>Block Number</th>
+                <th>Reported By</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        {{#each faultRecord}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.location}}</td>
+                <td>{{this.tags}}</td>
+                <td>{{this.block}}</td>
+                <td>{{this.reporter_name}} ({{this.reporter_email}})</td>
+                <td>{{ date this.date "Do MMMM YYYY" }}</td>
+                <td><a href="/fault/{{this._id}}/update" class="btn btn-primary">Edit</td>
+                <td><a href="/fault/{{this._id}}/delete" class="btn btn-danger">Delete</td>
+            </tr>
+        {{/each}}
+    </table>
+{{/block}}
+{{/extends}}

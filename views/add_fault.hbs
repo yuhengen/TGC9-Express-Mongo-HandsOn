@@ -1,0 +1,81 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}
+Add Fault
+{{/block}}
+
+{{#block 'content'}}
+<h1>Add Fault</h1>
+    <form method="POST">
+        <div>
+            <label class="form-label mt-3">Fault Name:</label>
+            <input type="text" name="name" class="form-control"/>
+        </div>
+        <div>
+            <label class="form-label mt-3">Location:</label>
+            <input type="text" name="location" class="form-control"/>
+        </div>
+        <div>
+            <label class="form-label mt-3">Tags:</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="urgent" id="urgent" name="tags">
+                <label class="form-check-label" for="urgent">Urgent</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="dangerous" id="dangerous" name="tags">
+                <label class="form-check-label" for="dangerous">Dangerous</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="equipment" id="equipment" name="tags">
+                <label class="form-check-label" for="equipment">Equipment</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="maintenance" id="maintenance" name="tags">
+                <label class="form-check-label" for="maintenance">Maintenance</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="infrastructure" id="infrastructure" name="tags">
+                <label class="form-check-label" for="infrastructure">Infrastructure</label>
+            </div>
+        </div>
+        <div>
+            <label class="form-label mt-3">Block</label>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="blk304" name="block" class="custom-control-input" value="304">
+                <label class="custom-control-label" for="blk304">Block 304</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="blk305" name="block" class="custom-control-input" value="305">
+                <label class="custom-control-label" for="blk305">Block 305</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="blk306" name="block" class="custom-control-input" value="306">
+                <label class="custom-control-label" for="blk306">Block 306</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="blk307" name="block" class="custom-control-input" value="307">
+                <label class="custom-control-label" for="blk307">Block 307</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="blk307a" name="block" class="custom-control-input" value="307A">
+                <label class="custom-control-label" for="blk307a">Block 307A</label>
+            </div>
+        </div>
+        <div>
+            <label class="form-label mt-3">Reporter's Name</label>
+            <input type="text" name="reporter_name" class="form-control"/>
+        </div>
+        <div>
+            <label class="form-label mt-3">Reporter's Email</label>
+            <input type="text" name="reporter_email" class="form-control"/>
+        </div>
+        <div>
+            <label class="form-label mt-3">Date:</label>
+            <input type="date" name="date" class="form-control"/>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary mt-3"/>
+        <a href="/" class="btn btn-danger mt-3">Cancel</a>
+    </form>
+{{/block}}
+
+{{/extends}}
