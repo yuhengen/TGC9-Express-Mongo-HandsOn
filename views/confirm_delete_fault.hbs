@@ -1,0 +1,23 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}
+Delete Faults
+{{/block}}
+    {{#block 'content'}}
+        <form method="POST">
+
+            <div class="alert alert-danger">
+                Are you sure you want to delete the following fault record:
+                <ul>
+                    <li>Name: {{record.name}}</li>
+                    <li>Name: {{record.block}}</li>
+                    <li>Date: {{date record.date 'DD/MM/YYYY' }}
+                </ul>
+            </div>
+
+            <input type="submit" value="Confirm Delete" class="btn btn-danger"/>
+            <a href="/fault" class="btn btn-success">Cancel</a>
+        </form>
+    {{/block}}
+
+{{/extends}}

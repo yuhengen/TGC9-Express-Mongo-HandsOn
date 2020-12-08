@@ -17,11 +17,15 @@
   },
   "homepage": "https://github.com/yuhengen/TGC9-Express-Mongo-HandsOn#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "handlebars-helpers": "^0.10.0",
     "hbs": "^4.1.1",
     "mongodb": "^3.6.3",
+    "toastr": "^2.1.4",
     "wax-on": "^1.2.2"
   }
 }
